@@ -14,6 +14,8 @@ ctrl+b d | (d)detach a session
 tmux attach-session <br /> tmux attach <br /> tmux a <br /> tmux attach -t 0| (a)ttach back to the last
 tmux ls | list running sessions
 ctrl+b $ <br /> ctrl+b : {rename-session session_name} | rename session
+ctrl+b ( | move to previous session
+ctrl+b ) | move to next session
 
 Commands (Windows) | Description
 ---------| -----------
