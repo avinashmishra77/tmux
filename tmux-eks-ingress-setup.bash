@@ -12,5 +12,7 @@ if ! tmux has-session -t ingress; then
     tmux send-keys -t ingress:1 \
       'terraform -chdir=/software/census/terraform/tf-aws/mgmt/helm-nginx-ingress apply -auto-approve' Enter
 
+    cd /software/census/terraform/tf-aws/mgmt/helm-nginx-ingress/
+
 fi
 tmux attach -t ingress
