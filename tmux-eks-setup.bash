@@ -4,14 +4,11 @@
 if ! tmux has-session -t eks; then
 
     # start new session eks
-    tmux new -s eks -d
+    tmux new -s eks -d -c /software/census/terraform/tf-aws/demo-env/services/eks-cluster
 
     # Start eks cluster deploy
     tmux send-keys -t eks:1 \
         'terraform -chdir=/software/census/terraform/tf-aws/demo-env/services/eks-cluster apply -auto-approve' Enter
-
-    # Go to working directory
-    cd /software/census/terraform/tf-aws/demo-env/services/eks-cluster
 
 fi
 tmux attach -t eks

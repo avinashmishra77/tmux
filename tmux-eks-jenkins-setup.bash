@@ -4,7 +4,7 @@
 if ! tmux has-session -t jenkins; then
 
     # start new session jenkins
-    tmux new -s jenkins -d
+    tmux new -s jenkins -d -c /software/census/terraform/tf-aws/mgmt/helm-jenkins/
 
     # Start jenkins deployment within ekc cluster
     tmux send-keys -t jenkins:1 \
@@ -19,7 +19,5 @@ if ! tmux has-session -t jenkins; then
     tmux send-keys -t jenkins:1 \
       'watch "kubectl get pods -A; kubectl get ingress -A"' Enter
     
-    cd /software/census/terraform/tf-aws/mgmt/helm-jenkins/
-
 fi
 tmux attach -t jenkins

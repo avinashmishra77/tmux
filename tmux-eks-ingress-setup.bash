@@ -4,7 +4,7 @@
 if ! tmux has-session -t ingress; then
 
     # start new session ingress
-    tmux new -s ingress -d
+    tmux new -s ingress -d -c /software/census/terraform/tf-aws/mgmt/helm-nginx-ingress
 
     # Start ingress deployment within ekc cluster
     tmux send-keys -t ingress:1 \
