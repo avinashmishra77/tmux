@@ -11,7 +11,7 @@ if ! tmux has-session -t eks; then
         'terraform -chdir=/software/census/terraform/tf-aws/demo-env/services/eks-cluster apply -auto-approve' Enter
 
     # Go to working directory
-    /software/census/terraform/tf-aws/demo-env/services/eks-cluster
+    cd /software/census/terraform/tf-aws/demo-env/services/eks-cluster
 
 fi
 tmux attach -t eks
