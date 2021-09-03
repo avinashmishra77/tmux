@@ -4,13 +4,13 @@
 if ! tmux has-session -t jenkins; then
 
     # start new session jenkins
-    tmux new -s jenkins -d -c /software/census/terraform/tf-aws/mgmt/helm-jenkins/
+    tmux new -s jenkins -d -c /software/census/terraform/tf-aws/mgmt/jenkins/
 
     # Start jenkins deployment within ekc cluster
     tmux send-keys -t jenkins:1 \
       'kp aws' Enter
     tmux send-keys -t jenkins:1 \
-      'terraform -chdir=/software/census/terraform/tf-aws/mgmt/helm-jenkins apply -auto-approve' Enter
+      'terraform -chdir=/software/census/terraform/tf-aws/mgmt/jenkins apply -auto-approve' Enter
 
     # Split window horizontally
     tmux split-window -t jenkins:1 -v
