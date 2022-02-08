@@ -26,7 +26,7 @@ ctrl+b m | (n)nexy window
 ctrl+b 0 | (0)window at position 0, usually 1
 ctrl+b 1 | (1)window at position 1, usually 2
 ctrl+b {n} | (nth)window
-ctrl_b , <br /> ctrl+b : {rename-window} | renaming window
+ctrl+b , <br /> ctrl+b : {rename-window} | renaming window
 
 Commands (Scroll buffer/Copy mode) | Description
 ------------------------ | -----------
